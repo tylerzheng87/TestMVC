@@ -2,7 +2,12 @@
 @{
     Layout = null;
 }
+<style>
+    .info {
+        color:red;
+    }
 
+</style>
 <!DOCTYPE html>
 
 <html>
@@ -11,7 +16,9 @@
     <title>DDL1</title>
 </head>
 <body>
-    @Html.DropDownList("Id",Model)
+   @*1. @Html.DropDownList("Id", Model)
+   2. @Html.DropDownList("Id",Model,new { id="hah",aaa="ccc",@class="info"})*@
+    @Html.DropDownList("Id",(SelectList)ViewBag.selList)
     <div> 
     </div>
 </body>

@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TypeHttpUrlTest</title>
+    <script src="~/scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn1").click(function () {
+                $.ajax({
+                    url: "/Test/AjaxTest", type: "post",
+                    success: function (res)
+                    {
+                        alert(res.Name);
+
+                    },
+                    error: function ()
+                    {
+                        alert("错误");
+
+                    }
+
+                });
+            });
+        })
+
+
+    </script>
+</head>
+<body>
+    <div> 
+    </div>
+    <button id="btn1">btn</button>
+</body>
+</html>
