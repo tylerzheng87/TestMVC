@@ -1,0 +1,28 @@
+﻿@model List<Person>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>F3Show</title>
+</head>
+<body>
+    <div> 
+        <select>
+            @foreach (Person p in Model)
+            {
+                <option selected="@(p.Id==2)">@p.Name</option>
+            }
+        </select>
+    </div>
+    <form action="~/Test/F3" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" />
+        <input type="file" name="f1" />
+        <input type="submit" />
+    </form>
+</body>
+</html>

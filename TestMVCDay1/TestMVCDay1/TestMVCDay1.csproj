@@ -129,6 +129,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IndexModel.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +139,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Test\F2.cshtml" />
+    <Content Include="Views\Test\F2Show.cshtml" />
+    <Content Include="Views\Test\F3.cshtml" />
+    <Content Include="Views\Test\F3Show.cshtml" />
+    <Content Include="Views\Test\ReadTemp.cshtml" />
+    <Content Include="Views\Test\DDL1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
