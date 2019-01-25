@@ -111,5 +111,36 @@ namespace TestMVCDay1.Controllers
         {
             return View();
         }
+
+        //MVC 并不会在请求失败的时候抛异常，而是把决定权交给程序员
+        public ActionResult Validate(Person person)
+        {
+            if (ModelState.IsValid)
+            {
+                return Content("Id=" + person.Id);
+            }
+            else
+            {
+                string msg = MVCHelper.GetValidMsg(ModelState);
+                return Content("验证失败"+msg);
+            }
+          
+        }
+        //面向过程 if，for，函数
+        //面向对象编程 继承
+        //面向切面编程 理念（把一些公共的行为写到一个地方，省的每个地方都写同样的代码）
+
+        //1.AAA()
+ //       try 
+	//{	        
+	//	faafaf
+	//}
+	//catch (Exception)
+	//{
+
+	//	throw;
+	//}
+        //----->都是如何组织代码，结构更清晰
+        //2.(global Application_Error)-------->Filler就是 AOP的思想的体现
     }
 }
