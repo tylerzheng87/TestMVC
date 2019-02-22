@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EFReady1
 {
-    [Table("T_Persons")]
+   
     public class PersonEF
     {
         public long Id { get; set; }

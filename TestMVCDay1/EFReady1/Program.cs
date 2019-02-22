@@ -110,14 +110,34 @@ namespace EFReady1
 
             using (TestDbContext ctx = new TestDbContext())
             {
-                PersonEF p2 = new PersonEF();
-                p2.CreateDateTime = DateTime.Now;
-                p2.Name = "rupeng.com";
-                ctx.PersonEF.Add(p2);
+                //PersonEF p2 = new PersonEF();
+                //p2.CreateDateTime = DateTime.Now;
+                //p2.Name = "rupeng.com";
+                //ctx.PersonEF.Add(p2);
+                //ctx.SaveChanges();
+                //var fluentpersons = ctx.FluentPerson.Where(p => p.Age > 10);
+                //foreach (var p in fluentpersons)
+                //{
+                //    Console.WriteLine(p);
+                //}
+
+                //var fluentpersons = ctx.FluentPerson.SingleOrDefault(p => p.Age > 10);
+                //if (fluentpersons == null)
+                //{
+                //    Console.WriteLine("已删除");
+                //}
+                //else
+                //{
+                //    ctx.FluentPerson.Remove(fluentpersons);
+                //    ctx.SaveChanges();
+                //}
+                //批量删除但效率低相当于先查出来一条一条删除
+                ctx.FluentPerson.RemoveRange(ctx.FluentPerson.Where(p => p.Id > 10));
                 ctx.SaveChanges();
+                Console.ReadKey();
 
             }
-                Console.ReadKey();
+                
 
         }
     }

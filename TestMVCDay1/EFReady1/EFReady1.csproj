@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dog.cs" />
+    <Compile Include="EntityConfig\PersonConfig.cs" />
+    <Compile Include="FluentPerson.cs" />
     <Compile Include="Master.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PersonEF.cs" />
@@ -62,7 +64,9 @@
     <Compile Include="TestDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
