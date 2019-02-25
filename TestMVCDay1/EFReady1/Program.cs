@@ -84,7 +84,7 @@ namespace EFReady1
             //   var list2=  list.OrderBy(p => p.Age);
             // var list2 = list.OrderByDescending(p => p.Age);
             // var list2 = list.OrderBy(p => p.Age).OrderBy(p => p.Salary); ;
-            //var list2 = list.OrderBy(p => p.Age).ThenBy(p => p.Salary);
+            //var list2 = list.OrderBy(p => p.Age).ThenBy(p => p.Salary);// 加个Tolist()就变成了立即执行而不是延迟执行
             //foreach (Person p1 in list2)
             //{
             //    Console.WriteLine(p1);
@@ -132,8 +132,43 @@ namespace EFReady1
                 //    ctx.SaveChanges();
                 //}
                 //批量删除但效率低相当于先查出来一条一条删除
-                ctx.FluentPerson.RemoveRange(ctx.FluentPerson.Where(p => p.Id > 10));
-                ctx.SaveChanges();
+
+                //查看EF的生成具体的sql，EF的查询是延迟执行的，只有遍历结果集的时候才开始执行，如果需要立即执行加上ToList获ToArray();
+                ctx.Database.Log = (sql) =>
+                  {
+
+                      Console.WriteLine("*********" + sql);
+                  };
+                //  ctx.FluentPerson.RemoveRange(ctx.FluentPerson.Where(p => p.Id > 10));
+
+                //FluentPerson p = ctx.FluentPerson.First();
+                //p.Name = "tman1";
+                //ctx.SaveChanges();
+                //必须写成Iqueryable<Person>,如果写成IEnumerable就会在内存中取后续数据
+                IQueryable<FluentPerson> result = ctx.FluentPerson.Where(p => p.Id > 3);
+                result = result.Where(p => p.Name.Length > 3);
+                result.ToList();
+                //(*)EF是跨数据库的,如果迁移到MYSQL上,就会翻译成MYSQl的语法，要配置对应的数据库EntityFrameWorkProvider
+                // ctx.Database.ExecuteSqlCommand("insert into T_Persons(Name,CreateDateTime,Age) values('tom',GetDate(),666)");
+                //  string name = Console.ReadLine();
+                //如果删除数据在EF中就无法批量的删除，要是批量就要拼写写下面的delete sql
+                //insert into T_Persons(Name, CreateDateTime, Age) values(@p0,GetDate(),666)所以并不是字符串拼接而是参数传入防止注入漏洞
+                // ctx.Database.ExecuteSqlCommand("insert into T_Persons(Name,CreateDateTime,Age) values({0},GetDate(),666)",name);
+                // var resultQuery = ctx.Database.SqlQuery<GroupCount>("SELECT  Age, COUNT(*) AgeCount FROM[pub].[dbo].[T_Persons]group by Age");
+                //闲的蛋疼就直接查所有数据foreach (FluentPerson item in resultQuery)
+                //如果只显示一列 int c=ctx.Database.SqlQuery<GroupCount>("SELECT COUNT(*) AgeCount FROM[pub].[dbo].[T_Persons]").SingleOrDefault;
+                //EF不是所有的Lamada写法都支持
+                //EF new 一个对象 会是Detached 状态如果 Add（），或者Remove修改对象状态 savechanges()后又变回Unchange状态
+                //foreach (GroupCount item in resultQuery)
+                //{
+                //    Console.WriteLine(item.Age+"="+item.AgeCount);
+                //}
+                //AsNoTracking或许能提高些性能
+                foreach (FluentPerson item in ctx.FluentPerson.AsNoTracking().Where(p => p.Id > 5))
+                {
+                    Console.WriteLine(ctx.Entry(item).State);
+                }
+
                 Console.ReadKey();
 
             }

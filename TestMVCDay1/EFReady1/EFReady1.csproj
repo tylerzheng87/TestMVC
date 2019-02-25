@@ -55,6 +55,7 @@
     <Compile Include="Dog.cs" />
     <Compile Include="EntityConfig\PersonConfig.cs" />
     <Compile Include="FluentPerson.cs" />
+    <Compile Include="GroupCount.cs" />
     <Compile Include="Master.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PersonEF.cs" />
