@@ -11,7 +11,7 @@ namespace EFReady1
 {
     public  class TestDbContext:DbContext
     {
-        public TestDbContext() : base("name=sqlConn")
+        public TestDbContext() : base("name=PostgreSqlDb")
         {
 
 

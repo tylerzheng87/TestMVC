@@ -132,7 +132,7 @@ namespace EFReady1
                 //    ctx.SaveChanges();
                 //}
                 //批量删除但效率低相当于先查出来一条一条删除
-                ctx.FluentPerson.RemoveRange(ctx.FluentPerson.Where(p => p.Id > 10));
+                ctx.FluentPerson.RemoveRange(ctx.FluentPerson.Where(p => p.Id ==1));
                 ctx.SaveChanges();
                 Console.ReadKey();
 
