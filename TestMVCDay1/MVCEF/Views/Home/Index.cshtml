@@ -1,0 +1,18 @@
+﻿@model MVCEF.Models.HomeIndexModel
+
+<head>
+
+    <title>Index</title>
+</head>
+
+<body>
+    <div>
+        班级名称:@Model.Classes.Name<br />
+        <ul>
+            @foreach (var s in Model.Students)
+            {
+                <li>@s.Name</li>
+            }
+        </ul>
+    </div>
+</body>
