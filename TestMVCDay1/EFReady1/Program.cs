@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,17 +50,17 @@ namespace EFReady1
             list.Add(s3);
             list.Add(s4);
             list.Add(s5);
-            Teacher t1 = new Teacher { Name = "tw" };
-            t1.Students.Add(s1);
-            t1.Students.Add(s2);
-            Teacher t2 = new Teacher { Name = "jt" };
-            t2.Students.Add(s2);
-            t2.Students.Add(s3);
-            t2.Students.Add(s5);
-            Teacher[] teachers = { t1, t2 };
+            //Teacher t1 = new Teacher { Name = "tw" };
+            //t1.Students.Add(s1);
+            //t1.Students.Add(s2);
+            //Teacher t2 = new Teacher { Name = "jt" };
+            //t2.Students.Add(s2);
+            //t2.Students.Add(s3);
+            //t2.Students.Add(s5);
+            //Teacher[] teachers = { t1, t2 };
 
-            int[] nums1 = { 3, 5, 8, 11, 15 };
-            int[] nums2 = { 5, 7, 8, 9, 15 };
+            //int[] nums1 = { 3, 5, 8, 11, 15 };
+            //int[] nums2 = { 5, 7, 8, 9, 15 };
 
             //  var nums3 = nums1.Except(nums2);
            //  var nums3 = nums1.Union(nums2);
@@ -67,20 +68,20 @@ namespace EFReady1
             //{
             //    Console.WriteLine(i);
             //}
-            var items = list.GroupBy(g => g.Age);
-            foreach (var item in items)
-            {
-                Console.WriteLine("key=" + item.Key + ",avg=" + item.Average(p => p.Salary) + ",max=" + item.Max(p => p.Salary));
-            }
+            //var items = list.GroupBy(g => g.Age);
+            //foreach (var item in items)
+            //{
+            //    Console.WriteLine("key=" + item.Key + ",avg=" + item.Average(p => p.Salary) + ",max=" + item.Max(p => p.Salary));
+            //}
 
-            foreach (var s in teachers.SelectMany(t=>t.Students))
-            {
-                Console.WriteLine(s);
-            }
-            Console.WriteLine(teachers.Any());
-            List<int> list1 = new List<int>();
-            Console.WriteLine(list1.Any());
-            Console.WriteLine(teachers.Any(t=>t.Name== "jt"));
+            //foreach (var s in teachers.SelectMany(t=>t.Students))
+            //{
+            //    Console.WriteLine(s);
+            //}
+            //Console.WriteLine(teachers.Any());
+            //List<int> list1 = new List<int>();
+            //Console.WriteLine(list1.Any());
+            //Console.WriteLine(teachers.Any(t=>t.Name== "jt"));
             //   var list2=  list.OrderBy(p => p.Age);
             // var list2 = list.OrderByDescending(p => p.Age);
             // var list2 = list.OrderBy(p => p.Age).OrderBy(p => p.Salary); ;
@@ -107,13 +108,13 @@ namespace EFReady1
                 Console.WriteLine(j);
                 Console.WriteLine(s9==null);
             }
-
+          //  项目刚开始建议加上他，开发差不多了把后边变成null Database.SetInitializer(new DropCreateDatabaseIfModelChanges<TestDbContext>());
             using (TestDbContext ctx = new TestDbContext())
             {
-                //PersonEF p2 = new PersonEF();
+                //FluentPerson p2 = new FluentPerson();
                 //p2.CreateDateTime = DateTime.Now;
                 //p2.Name = "rupeng.com";
-                //ctx.PersonEF.Add(p2);
+                //ctx.FluentPerson.Add(p2);
                 //ctx.SaveChanges();
                 //var fluentpersons = ctx.FluentPerson.Where(p => p.Age > 10);
                 //foreach (var p in fluentpersons)
@@ -145,9 +146,9 @@ namespace EFReady1
                 //p.Name = "tman1";
                 //ctx.SaveChanges();
                 //必须写成Iqueryable<Person>,如果写成IEnumerable就会在内存中取后续数据
-                IQueryable<FluentPerson> result = ctx.FluentPerson.Where(p => p.Id > 3);
-                result = result.Where(p => p.Name.Length > 3);
-                result.ToList();
+                //IQueryable<FluentPerson> result = ctx.FluentPerson.Where(p => p.Id > 3);
+                //result = result.Where(p => p.Name.Length > 3);
+                //result.ToList();
                 //(*)EF是跨数据库的,如果迁移到MYSQL上,就会翻译成MYSQl的语法，要配置对应的数据库EntityFrameWorkProvider
                 // ctx.Database.ExecuteSqlCommand("insert into T_Persons(Name,CreateDateTime,Age) values('tom',GetDate(),666)");
                 //  string name = Console.ReadLine();
@@ -164,14 +165,40 @@ namespace EFReady1
                 //    Console.WriteLine(item.Age+"="+item.AgeCount);
                 //}
                 //AsNoTracking或许能提高些性能
-                foreach (FluentPerson item in ctx.FluentPerson.AsNoTracking().Where(p => p.Id > 5))
-                {
-                    Console.WriteLine(ctx.Entry(item).State);
-                }
-
+                //foreach (FluentPerson item in ctx.FluentPerson.AsNoTracking().Where(p => p.Id > 5))
+                //{
+                //    Console.WriteLine(ctx.Entry(item).State);
+                //}
+                //
+                Teacher t1 = new Teacher();
+                t1.Name = "李老师";
+                Student ss1 = new Student() { Name = "小明" };
+                Student ss2 = new Student() { Name = "小红" };
+                ss1.Teachers.Add(t1);
+                ss2.Teachers.Add(t1);
+                ctx.Students.Add(ss1);
+                ctx.Students.Add(ss2);
+                ctx.SaveChanges();
                 Console.ReadKey();
+                //一对多的中不建议配置一段的集合属性，因此配置的时候不用给WithMany()参数,如果配置了集合属性，则必须给
+                //WithMany参数，多对多关系必须要给WithMany()参数;
+                //一对多最佳的方法(不配置一段的集合属性)
+                //1.多段
+                //         public class Student
+                //{
+                //    public long Id { get; set; }
+                //    public string Name { get; set; }
 
-            }
+                //    public virtual ICollection<Teacher> Teachers { get; set; } = new List<Teacher>();
+
+                //}
+                //在多段的模型配置中
+                //this.hasrequired(else=>else.Class).WithMany().HasForeignKey(e => e.ClassId);
+                // 一对多的配置（在一端配置一个集合属性极端不推荐）
+           
+
+
+    }
                 
 
         }

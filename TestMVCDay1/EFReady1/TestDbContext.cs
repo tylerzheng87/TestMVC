@@ -11,17 +11,18 @@ namespace EFReady1
 {
     public  class TestDbContext:DbContext
     {
-        public TestDbContext() : base("name=PostgreSqlDb")
+        public TestDbContext() : base("name=Connstring")
         {
             //为了EF Log show sql 语句时候不显示那些_mirgrationhistory,
             //EF其实不支持批量的操作，SqlServer特有的语法EF仍然是不支持的，为了保证在不同数据库移植
             //数据库独有的函数，所很多场景需要原始sql语句，不要“手里有锤子到处都是钉子”
-            Database.SetInitializer<TestDbContext>(null);
+           // Database.SetInitializer<TestDbContext>(null);
 
         }
-        public DbSet<PersonEF> PersonEF { get; set; }
+     // public DbSet<PersonEF> PersonEF { get; set; }
         public DbSet<FluentPerson>FluentPerson { get; set; }
-
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
         //以下for FluentAPI
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

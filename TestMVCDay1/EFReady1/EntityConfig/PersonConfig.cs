@@ -12,6 +12,7 @@ namespace EFReady1.EntityConfig
         public PersonConfig()
         {
             this.ToTable("T_Persons");
+            this.Property(e => e.Name).HasMaxLength(30);//HasMaxLength加上他就不会提交给服务器
         }
 
     }
