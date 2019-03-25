@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pentest", "pentest\pentest.csproj", "{61113A7C-A3C1-4B84-9BE8-CC2E1598152B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "deep-low-copy", "deep-low-copy\deep-low-copy.csproj", "{D32F4B9B-6C3E-41CB-886C-C46FA552B911}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{61113A7C-A3C1-4B84-9BE8-CC2E1598152B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61113A7C-A3C1-4B84-9BE8-CC2E1598152B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61113A7C-A3C1-4B84-9BE8-CC2E1598152B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D32F4B9B-6C3E-41CB-886C-C46FA552B911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32F4B9B-6C3E-41CB-886C-C46FA552B911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32F4B9B-6C3E-41CB-886C-C46FA552B911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32F4B9B-6C3E-41CB-886C-C46FA552B911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
