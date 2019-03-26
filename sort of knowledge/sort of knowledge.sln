@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pentest", "pentest\pentest.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "deep-low-copy", "deep-low-copy\deep-low-copy.csproj", "{D32F4B9B-6C3E-41CB-886C-C46FA552B911}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "结构体", "结构体\结构体.csproj", "{D5AFB6DC-71F1-444B-AB87-48832C58423D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D32F4B9B-6C3E-41CB-886C-C46FA552B911}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D32F4B9B-6C3E-41CB-886C-C46FA552B911}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D32F4B9B-6C3E-41CB-886C-C46FA552B911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5AFB6DC-71F1-444B-AB87-48832C58423D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AFB6DC-71F1-444B-AB87-48832C58423D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AFB6DC-71F1-444B-AB87-48832C58423D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AFB6DC-71F1-444B-AB87-48832C58423D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
