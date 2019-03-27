@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "拆箱装箱", "拆箱装�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "相等", "相等\相等.csproj", "{70D069AC-39F6-45F9-8765-2795361C0527}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refout", "Refout\Refout.csproj", "{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{70D069AC-39F6-45F9-8765-2795361C0527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70D069AC-39F6-45F9-8765-2795361C0527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70D069AC-39F6-45F9-8765-2795361C0527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
