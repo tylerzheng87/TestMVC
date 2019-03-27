@@ -10,6 +10,17 @@ namespace 相等
     {
         static void Main(string[] args)
         {
+
+            string t1 = "kingbo";
+            string t2 = "kingbo";
+            string t3 = "king" + "bo";
+            string t5 = new string(new char[] { 'k', 'i', 'n', 'g', 'b', 'o' });
+            Console.WriteLine(object.ReferenceEquals(t1, t2));
+            Console.WriteLine(object.ReferenceEquals(t1, t3));//编译器优化
+            Console.WriteLine(object.ReferenceEquals(t1, t5));//正常来说t1和t2应该是两个对象，但CLR帮我们做了处理因为字符串的长度以及内容是不变的，
+            //CLR就重用了上面的字符串就可以了，所以s1和s2指向同一个对象
+
+
             Person p1 = new Person();
             p1.Name = "king";
             p1.Age = 10;
