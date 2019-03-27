@@ -10,7 +10,8 @@ namespace 相等
     {
         static void Main(string[] args)
         {
-
+            //字符串是引用类型，程序中会存在大量的字符串对象，如果每次都创建一个字符串对象，会比较浪费内存，性能低，
+            //因此CLR做了“暂存池”，在一些情况下对字符串对象进行重用
             string t1 = "kingbo";
             string t2 = "kingbo";
             string t3 = "king" + "bo";
