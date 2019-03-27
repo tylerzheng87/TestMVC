@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "结构体", "结构体\结�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "拆箱装箱", "拆箱装箱\拆箱装箱.csproj", "{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "相等", "相等\相等.csproj", "{70D069AC-39F6-45F9-8765-2795361C0527}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70D069AC-39F6-45F9-8765-2795361C0527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D069AC-39F6-45F9-8765-2795361C0527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D069AC-39F6-45F9-8765-2795361C0527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D069AC-39F6-45F9-8765-2795361C0527}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
