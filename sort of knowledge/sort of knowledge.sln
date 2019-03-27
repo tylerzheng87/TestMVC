@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "deep-low-copy", "deep-low-c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "结构体", "结构体\结构体.csproj", "{D5AFB6DC-71F1-444B-AB87-48832C58423D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "拆箱装箱", "拆箱装箱\拆箱装箱.csproj", "{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D5AFB6DC-71F1-444B-AB87-48832C58423D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5AFB6DC-71F1-444B-AB87-48832C58423D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5AFB6DC-71F1-444B-AB87-48832C58423D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768065EA-C3CE-4E65-AB07-7BD39FEDF78B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
