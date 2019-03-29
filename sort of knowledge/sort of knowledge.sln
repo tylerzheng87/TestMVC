@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "相等", "相等\相等.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refout", "Refout\Refout.csproj", "{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "委托1", "委托1\委托1.csproj", "{4743672E-F2F2-4B7C-90E8-BD75A2E436EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E02245EB-7259-4DFF-8C24-951F1E8D0CE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4743672E-F2F2-4B7C-90E8-BD75A2E436EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4743672E-F2F2-4B7C-90E8-BD75A2E436EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4743672E-F2F2-4B7C-90E8-BD75A2E436EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4743672E-F2F2-4B7C-90E8-BD75A2E436EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
