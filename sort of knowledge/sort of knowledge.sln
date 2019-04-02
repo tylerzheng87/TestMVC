@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "内置委托类型", "内�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "匿名方法", "匿名方法\匿名方法.csproj", "{6B613C7F-D62C-489B-A069-EFCCD6B65EC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lamada表达式1", "lamada表达式1\lamada表达式1.csproj", "{F7F0141C-42AE-45D5-ABC9-09F13D92612C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{6B613C7F-D62C-489B-A069-EFCCD6B65EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B613C7F-D62C-489B-A069-EFCCD6B65EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B613C7F-D62C-489B-A069-EFCCD6B65EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F0141C-42AE-45D5-ABC9-09F13D92612C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F0141C-42AE-45D5-ABC9-09F13D92612C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F0141C-42AE-45D5-ABC9-09F13D92612C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F0141C-42AE-45D5-ABC9-09F13D92612C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
