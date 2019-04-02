@@ -25,8 +25,24 @@ namespace 拆箱装箱
             int i = 5;
             object obj = i;//object C#,Object CTS 装箱（boxing）
             int i1 = (int)obj;//拆箱
+             
+            
             Console.WriteLine(i1);
             Console.ReadKey();
+        }
+
+
+        public  class MyClass
+        {
+            void cctv()
+            {
+            }
+
+            public  int cctv(int i)
+            {
+                return 1;
+            }
+
         }
     }
 }
