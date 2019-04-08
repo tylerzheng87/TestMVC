@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lamada表达式1", "lamada�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "事件入门", "事件入门\事件入门.csproj", "{A22EC806-2C69-4862-9679-E09078B5E451}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "反射入门", "反射入门\反射入门.csproj", "{2071878D-7558-4EED-B846-0847F8ADC161}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "反射2", "反射2\反射2.csproj", "{583366A9-0105-443A-A732-113AD7734829}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{A22EC806-2C69-4862-9679-E09078B5E451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A22EC806-2C69-4862-9679-E09078B5E451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A22EC806-2C69-4862-9679-E09078B5E451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2071878D-7558-4EED-B846-0847F8ADC161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2071878D-7558-4EED-B846-0847F8ADC161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2071878D-7558-4EED-B846-0847F8ADC161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2071878D-7558-4EED-B846-0847F8ADC161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{583366A9-0105-443A-A732-113AD7734829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{583366A9-0105-443A-A732-113AD7734829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{583366A9-0105-443A-A732-113AD7734829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{583366A9-0105-443A-A732-113AD7734829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
