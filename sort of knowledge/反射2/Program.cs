@@ -16,13 +16,18 @@ namespace 反射2
             //Console.WriteLine(t2);
             //Type t1type = t1.GetType();
             //Console.WriteLine(t1type.BaseType.BaseType);
-            Type t1 = typeof(Person);
-            ConstructorInfo c1 = t1.GetConstructor(new Type[0]);
-            ConstructorInfo c2 = t1.GetConstructor(new Type[] { typeof(string)});
-            ConstructorInfo c3 = t1.GetConstructor(new Type[] { typeof(int),typeof(string)});
-            //public object Invoke(object[] parameters);
-            MethodInfo m1 = t1.GetMethod("SayHi");
-            Console.WriteLine(c1);
+            Type type = typeof(Person);
+            object obj = Activator.CreateInstance(type);//new Person();
+            PropertyInfo proName = type.GetProperty("Name");
+            proName.SetValue(obj,"Tman");
+            MethodInfo methodSayHi = type.GetMethod("SayHi", new Type[0]);
+            methodSayHi.Invoke(obj, new object[0]);
+            //ConstructorInfo c1 = t1.GetConstructor(new Type[0]);
+            //ConstructorInfo c2 = t1.GetConstructor(new Type[] { typeof(string)});
+            //ConstructorInfo c3 = t1.GetConstructor(new Type[] { typeof(int),typeof(string)});
+            ////public object Invoke(object[] parameters);
+            //MethodInfo m1 = t1.GetMethod("SayHi");
+            //Console.WriteLine(c1);
             Console.ReadKey();
         }
     }
