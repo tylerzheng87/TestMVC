@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "反射2", "反射2\反射2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "模拟PropertyGri", "模拟PropertyGri\模拟PropertyGri.csproj", "{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "对象浅拷贝", "对象浅拷贝\对象浅拷贝.csproj", "{98A7E1B2-3EE1-4BCE-AE55-2B4D3488ED16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A7E1B2-3EE1-4BCE-AE55-2B4D3488ED16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A7E1B2-3EE1-4BCE-AE55-2B4D3488ED16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A7E1B2-3EE1-4BCE-AE55-2B4D3488ED16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A7E1B2-3EE1-4BCE-AE55-2B4D3488ED16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
