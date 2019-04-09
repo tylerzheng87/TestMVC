@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "反射入门", "反射入�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "反射2", "反射2\反射2.csproj", "{583366A9-0105-443A-A732-113AD7734829}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "模拟PropertyGri", "模拟PropertyGri\模拟PropertyGri.csproj", "{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{583366A9-0105-443A-A732-113AD7734829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{583366A9-0105-443A-A732-113AD7734829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{583366A9-0105-443A-A732-113AD7734829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D5BAA43-FEC5-409D-92E9-3196EC29BFD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
