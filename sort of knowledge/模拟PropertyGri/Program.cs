@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -45,8 +46,10 @@ namespace 模拟PropertyGri
 
 
         }
+        [DisplayName("姓名")]
         public string Name { get; set; }
         public int Age { get; set; }
+        [Obsolete]//意味着这个分方法不能用了或者成员已经过时
         public void SayHi()
         {
             Console.WriteLine("大家好,我是" + this.Name + "，我的年龄" + this.Age);
