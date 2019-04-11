@@ -17,8 +17,22 @@ namespace ORM
                p1.Age = 7;
                ORM.Insert(p1);
                */
-            Person p1 = (Person)ORM.SelectById(typeof(Person),1);
-            Console.WriteLine(p1.Name);
+            /*
+         Person p1 = (Person)ORM.SelectById(typeof(Person),1);
+         Person p2 = (Person)ORM.SelectById(typeof(Dog), 1);
+         if (p2==null)
+         {
+             Console.WriteLine("没有找到狗");
+         }
+         else
+         {
+             Console.WriteLine(p2.Name);
+         }  */
+         //加入泛型的目的使编译都不通过
+            Dog d1 = ORM.SelectById<Dog>(1);
+            d1.Weight++;
+            ORM.Update(d1);
+            Console.WriteLine(d1.Name);
         }
     }
 }

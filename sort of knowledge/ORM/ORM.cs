@@ -52,6 +52,39 @@ namespace ORM
             sbSQL.Append(" values(").Append(string.Join(",",paramNames)).Append(")");
             //SqlHelper.ExcuteNonQuery(sqlSQL.ToString(),sqlParameters);
         }
+
+        public static T SelectById<T>(int id) where T:new()//泛型约束，约束T必须有个无参的构造函数
+        {
+
+
+            Type type = typeof(T);//typeof(Person)
+            string className = type.Name;
+            //约定 叫Id
+            string sql = "select * from " + className + " where Id=@Id";
+            //DataTable dt=SqlHelper.ExecuteQuery(sql,new SqlParameter("@Id",id))
+            DataTable dt = null;
+            if (dt.Rows.Count <= 0)
+            {
+                //return null;
+                return default(T);//default()运算符用来获得类型的默认值
+                //default(int)->0 default(bool)->false default(Person)->null
+            }
+            else if (dt.Rows.Count > 1)
+            {
+                throw new Exception(" 粗大事了,查到多条Id=" + id + "数据");
+            }
+            // Object obj = Activator.CreateInstance(type);
+            DataRow row = dt.Rows[0];
+            T obj = new T();
+            foreach (PropertyInfo propInfo in type.GetProperties())
+            {
+                string propName = propInfo.Name;//属性名就是列名
+                object value = row[propName];//获取数据库中的列的值
+                propInfo.SetValue(obj, value);//给obj对象的propInfo属性赋值为value
+            }
+            return obj;
+        }
+
         public static Object SelectById(Type type, int id)
         {
             string className = type.Name;
@@ -76,6 +109,22 @@ namespace ORM
                 propInfo.SetValue(obj, value);//给obj对象的propInfo属性赋值为value
             }
             return obj;
+        }
+        public static void DeleteById(Type type, int id)
+        {
+
+
+
+        }
+
+
+        public static void Update(Object obj)
+        {
+            //生成Update语句了
+            //怎么知道哪一列被修改了呢
+            //就是把所有的列在更新一遍无所谓
+
+
         }
     }
 }
