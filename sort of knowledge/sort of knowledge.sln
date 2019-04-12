@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "反射Attribute", "反射At
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM", "ORM\ORM.csproj", "{9895F017-7E79-434E-889A-CF8043BEEEDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "正则表达式", "正则表达式\正则表达式.csproj", "{E02A13DB-33CD-4243-8CA3-18AD7CD96B5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{9895F017-7E79-434E-889A-CF8043BEEEDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9895F017-7E79-434E-889A-CF8043BEEEDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9895F017-7E79-434E-889A-CF8043BEEEDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02A13DB-33CD-4243-8CA3-18AD7CD96B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02A13DB-33CD-4243-8CA3-18AD7CD96B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02A13DB-33CD-4243-8CA3-18AD7CD96B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02A13DB-33CD-4243-8CA3-18AD7CD96B5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
