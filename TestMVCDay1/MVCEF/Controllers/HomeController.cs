@@ -19,10 +19,10 @@ namespace MVCEF.Controllers
         {
             using (MyContext ctx = new MyContext())
             {
-                /* MinZu minzu = new MinZu { Name="hanzu"};
+               MinZu minzu = new MinZu { Name="hanzu"};
                  ctx.Minzus.Add(minzu);
                  ctx.SaveChanges();
-                 */
+                
                 var clz = ctx.Classes.First();
                 var students=ctx.Students.Where(s => s.ClassId == clz.Id).ToList();
                 // ViewBag.students = students;

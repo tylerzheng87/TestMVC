@@ -1,18 +1,58 @@
 ﻿@model MVCEF.Models.HomeIndexModel
 
 <head>
-
+   
+    <meta charset="utf-8">
     <title>Index</title>
+  <style type="text/css">
+      .ReactModal__Content>.confirm-title {
+    background-image: none,linear-gradient(180deg,hsla(0,0%,100%,.6) 0,hsla(0,0%,100%,0));
+    background-position: 50% 50%;
+    background-color: #e3e3e3;
+    color: #2e2e2e;
+    border-bottom: 1px solid #c5c5c5;
+    padding: 5px 8px 5px 10px;
+}
+      ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_222222_256x240.png); }
+  </style>
+   
+
+
 </head>
 
 <body>
-    <div>
-        班级名称:@Model.Classes.Name<br />
-        <ul>
-            @foreach (var s in Model.Students)
-            {
-                <li>@s.Name</li>
-            }
-        </ul>
+ 
+    <div id="dialog" title="Discard Plan of Care" class="confirm-title">
+        <p>Are you sure you want to discard the Plan of Care? You cannot undo it once you discarded the Plan of Care.</p>
+        <div>
+            <span>Comment</span>
+        </div>
+        <div >  
+           
+            <input type="text" id="Comment" name="Comment" value="" class="false" maxlength="2000">
+        </div>
     </div>
+  
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.12.4.js"></script>
+    <script src="~/scripts/jquery-ui.js"></script>
+      <script>
+          $(function () {
+              $("#dialog").dialog({
+                  resizable: false,
+                  height: "auto",
+                  width: 400,
+                  modal: true,
+                  buttons: {
+                      "Delete all items": function() {
+                          //这里可以加入一些操作
+                          $( this ).dialog( "close" );
+                      },
+                      Cancel: function() {
+                          $( this ).dialog( "close" );
+                      }
+                  }
+              });
+          });</script>
+
 </body>
