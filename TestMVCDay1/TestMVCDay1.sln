@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMVCDay1", "TestMVCDay1\TestMVCDay1.csproj", "{C8194A5D-67AA-4FDC-ABB0-00FAF24ECDA2}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFEntities", "EFEntities\EFEntities.csproj", "{6FE18332-B3A5-491D-B8D0-DB1859BC6D2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCEF", "MVCEF\MVCEF.csproj", "{57335505-FE7B-4A6E-B63A-6ABBEC733B8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRTest1", "SignalRTest1\SignalRTest1.csproj", "{A7B0F028-CD9F-48D1-B815-5D02CE25DD52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{57335505-FE7B-4A6E-B63A-6ABBEC733B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57335505-FE7B-4A6E-B63A-6ABBEC733B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57335505-FE7B-4A6E-B63A-6ABBEC733B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B0F028-CD9F-48D1-B815-5D02CE25DD52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B0F028-CD9F-48D1-B815-5D02CE25DD52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7B0F028-CD9F-48D1-B815-5D02CE25DD52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B0F028-CD9F-48D1-B815-5D02CE25DD52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE581BFB-271E-42B1-8F20-E55861CA38F9}
 	EndGlobalSection
 EndGlobal
