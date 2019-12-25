@@ -1,0 +1,6 @@
+项目下载地址：https://codeload.github.com/szwacz/electron-boilerplate/zip/3bc7342c8833f798ea8
+
+说明：
+1、在npm install 时如果保错就多试几次，出现警告没关系
+
+2、资料中提供的项目是已经npm install好了的，可以直接使用
