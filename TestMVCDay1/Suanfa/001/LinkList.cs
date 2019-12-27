@@ -18,7 +18,7 @@ namespace _001_线性表 {
 
         public LinkList()
         {
-            head = null;
+            head = null; 
         }
 
 

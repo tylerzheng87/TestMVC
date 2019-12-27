@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001", "001\001.csproj", "{4D20FADA-1F4B-4113-9611-58A257248C0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001-xianxingbiao", "001\001-xianxingbiao.csproj", "{4D20FADA-1F4B-4113-9611-58A257248C0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002", "002zhan\002.csproj", "{3524F3DF-06B1-43CF-848C-1043DB20735B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002zhan", "002zhan\002zhan.csproj", "{3524F3DF-06B1-43CF-848C-1043DB20735B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003duilie", "003duilie\003duilie.csproj", "{8CA3F5A2-D787-4E13-8627-212D4D9B1D13}"
 EndProject
