@@ -29,7 +29,7 @@ namespace _001_线性表 {
 
             Console.WriteLine(seqList.GetEle(0));
             Console.WriteLine(seqList[0]);
-            seqList.Insert("777",1);
+            seqList.Insert("777",2);
             for (int i = 0; i < seqList.GetLength(); i++)
             {
                 Console.Write(seqList[i]+" ");

@@ -8,6 +8,7 @@ namespace _004_栈和队列应用举例 {
     class Program {
         static void Main(string[] args)
         {
+
             string str = Console.ReadLine();
             Stack<char> stack = new Stack<char>();
             Queue<char> queue = new Queue<char>();

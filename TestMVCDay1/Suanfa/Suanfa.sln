@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005chuan", "005chuan\005chu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006zhijiecharu", "006\006zhijiecharu.csproj", "{22385555-8E8D-49AB-819E-FE48164A987F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "007jiandanxuanzepaixu", "007\007jiandanxuanzepaixu.csproj", "{BE8A8195-D24B-4D9C-95AD-E88354B94169}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "007maopaojiandanxuanzepaixu", "007\007maopaojiandanxuanzepaixu.csproj", "{BE8A8195-D24B-4D9C-95AD-E88354B94169}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "008kuaisupaixu", "008\008kuaisupaixu.csproj", "{9CA47C4D-4325-4637-AE62-34E9988A00ED}"
 EndProject
